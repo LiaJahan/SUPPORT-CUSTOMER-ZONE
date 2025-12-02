@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Unable to access dashboard",
+    "description": "Customer reports that their dashboard loads infinitely after login.",
+    "customer": "Sarah Mitchell",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-01-10T09:12:00Z",
+    "serial" : "#1101"
+  },
+  {
+    "id": 2,
+    "title": "Refund needed for duplicate charge",
+    "description": "Customer was billed twice for the same subscription period.",
+    "customer": "Brandon Fisher",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-01-11T14:22:00Z",
+    "serial" : "#1102"
+  },
+  {
+    "id": 3,
+    "title": "2FA code not delivered",
+    "description": "Two-factor authentication codes are not being sent to user's phone.",
+    "customer": "Linda Perez",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-01-12T07:58:00Z",
+    "serial" : "#1103"
+  },
+  {
+    "id": 4,
+    "title": "Feature request: Multi-language support",
+    "description": "Customer would like to use Customer Service Zone in Spanish.",
+    "customer": "Carlos Ramos",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-01-13T11:45:00Z",
+    "serial" : "#1104"
+  },
+  {
+    "id": 5,
+    "title": "Password reset email not received",
+    "description": "Password reset link is not being sent despite multiple attempts.",
+    "customer": "Megan Oliver",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-01-14T15:05:00Z",
+    "serial" : "#1105"
+  },
+  {
+    "id": 6,
+    "title": "Ticket history not showing",
+    "description": "Customer's previous tickets do not appear on their profile.",
+    "customer": "Jason Wright",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-01-15T10:30:00Z",
+    "serial" : "#1106"
+  },
+  {
+    "id": 7,
+    "title": "Email notifications delayed",
+    "description": "Notifications for ticket updates arrive several hours late.",
+    "customer": "Emily Brooks",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-01-16T13:48:00Z",
+    "serial" : "#1107"
+  },
+  {
+    "id": 8,
+    "title": "Incorrect customer profile details",
+    "description": "Profile fields update incorrectly when saving changes.",
+    "customer": "Daniel Carter",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-01-17T09:20:00Z",
+    "serial" : "#1108"
+  },
+  {
+    "id": 9,
+    "title": "Live chat not loading",
+    "description": "Live support chat does not appear on the screen for the customer.",
+    "customer": "Olivia Moore",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-01-18T18:05:00Z",
+    "serial" : "#1109"
+  },
+  {
+    "id": 10,
+    "title": "Slow loading times",
+    "description": "Website takes too long to load ticket details.",
+    "customer": "Jacob Sullivan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-01-19T11:11:00Z",
+    "serial" : "#1110"
+  },
+  {
+    "id": 11,
+    "title": "Cannot submit new ticket",
+    "description": "Customer gets an error message when submitting a new ticket.",
+    "customer": "Nina Foster",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-01-20T08:43:00Z",
+    "serial" : "#1111"
+  },
+  {
+    "id": 12,
+    "title": "Wrong file type error",
+    "description": "Customer cannot upload JPG files even though the type is supported.",
+    "customer": "Ethan Clark",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-01-21T14:10:00Z",
+    "serial" : "#1112"
+  },
+  {
+    "id": 13,
+    "title": "Monthly invoice missing",
+    "description": "Customer did not receive their January invoice.",
+    "customer": "Amanda Hill",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-01-22T17:55:00Z",
+    "serial" : "#1113"
+  },
+  {
+    "id": 14,
+    "title": "Attachments not visible",
+    "description": "Uploaded attachments do not appear in the ticket view.",
+    "customer": "Ryan Bennett",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-01-23T16:32:00Z",
+    "serial" : "#1114"
+  },
+  {
+    "id": 15,
+    "title": "Account suspended unexpectedly",
+    "description": "Customer reports their account was suspended without notification.",
+    "customer": "Sofia Martinez",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-01-24T08:02:00Z",
+    "serial" : "#1115"
+  }
+]
