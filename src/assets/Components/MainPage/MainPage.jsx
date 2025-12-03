@@ -1,16 +1,7 @@
 import Cards from './Cards';
 import { ToastContainer } from 'react-toastify';
 
-const MainPage = ({
-    fetchDataApi,
-    tasks,
-    setTasks,
-    resolvedTasks,
-    setResolvedTasks,
-    inProgressCount,
-    setInProgressCount,
-    resolvedCount,
-    setResolvedCount
+const MainPage = ({fetchDataApi, tasks, setTasks, resolvedTasks, setResolvedTasks, inProgressCount, setInProgressCount, resolvedCount, setResolvedCount
 }) => {
 
 
@@ -20,30 +11,22 @@ const MainPage = ({
 
             <div className='flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-around gap-4 sm:gap-10'>
 
-                {/* In-progress Box */}
                 <div
                     className='w-full sm:w-1/3 h-72 sm:h-80 rounded-xl flex flex-col items-center justify-center text-white font-bold'
                     style={{
                         backgroundImage: `linear-gradient(125.07deg, rgba(99, 46, 227, 0.8), rgba(159, 98, 242, 0.8)), url('https://i.ibb.co/qMjMmhth/vector1.png')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundBlendMode: 'overlay',
+                        backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundBlendMode: 'overlay',
                     }}
                 >
                     <h3 className='text-2xl mt-5'>In-Progress</h3>
                     <h1 className='text-7xl'>{inProgressCount}</h1>
                 </div>
 
-                {/* Resolved Box */}
                 <div
                     className='w-full sm:w-1/3 h-72 sm:h-80 rounded-xl flex flex-col items-center justify-center text-white font-bold text-2xl'
                     style={{
                         backgroundImage: `linear-gradient(125.07deg, rgba(25, 255, 15, 0.8), rgba(34, 59, 70, 0.8)), url('https://i.ibb.co/qMjMmhth/vector1.png')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundBlendMode: 'overlay',
+                        backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundBlendMode: 'overlay',
                     }}
                 >
                     <h3 className='text-2xl mt-5'>Resolved</h3>
@@ -52,7 +35,7 @@ const MainPage = ({
 
             </div>
 
-            {/* Cards Section */}
+            
             <div className='mt-10 w-full text-left px-2 sm:px-30 py-5'>
                 <Cards
                     fetchDataApi={fetchDataApi}

@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Cards = ({
-    fetchDataApi,
-    tasks,
-    setTasks,
-    resolvedTasks,
-    setResolvedTasks,
-    inProgressCount,
-    setInProgressCount,
-    resolvedCount,
-    setResolvedCount
-}) => {
+    fetchDataApi, tasks, setTasks, resolvedTasks, setResolvedTasks, setInProgressCount, setResolvedCount, inProgressCount }) => {
 
     const [api, setApi] = useState([]);
 
@@ -20,26 +11,31 @@ const Cards = ({
     }, [fetchDataApi]);
 
     const handleAddToTasks = (ticket) => {
-        if (!tasks.some(t => t.id === ticket.id)) {
-            setTasks([...tasks, ticket]);
-            setInProgressCount(prev => prev + 1);
-            toast.success(`${ticket.title} added to Task Status`);
+
+        const alreadyExists = tasks.find((task) => task.id === ticket.id);
+
+
+        if (!alreadyExists) {
+            const updatedTasks = [...tasks, ticket];
+            setTasks(updatedTasks);
+            setInProgressCount(inProgressCount + 1);
+            toast.success(ticket.title + " added to Task Status");
         }
     };
 
+
     const handleComplete = (task) => {
-    setTasks(prev => prev.filter(t => t.id !== task.id)); // remove from tasks
-    setResolvedTasks(prev => [...prev, task]); // add to resolved
-    setInProgressCount(prev => prev - 1);
-    setResolvedCount(prev => prev + 1);
-    toast.info(`${task.title} Completed!`);
-};
+        setTasks(prev => prev.filter(t => t.id !== task.id));
+        setResolvedTasks(prev => [...prev, task]);
+        setInProgressCount(prev => prev - 1);
+        setResolvedCount(prev => prev + 1);
+        toast.info(`${task.title} Completed!`);
+    };
 
 
     return (
         <div className="w-full flex flex-col lg:flex-row justify-between gap-6 sm:gap-10">
 
-            {/* LEFT — Tickets */}
             <div className="flex-1 px-2 sm:px-0">
                 <h2 className="mb-5 text-3xl sm:text-5xl font-semibold">Customers Tickets</h2>
 
@@ -78,7 +74,6 @@ const Cards = ({
                 </div>
             </div>
 
-            {/* RIGHT — Task Status + Resolved Tasks */}
             <div className="w-full lg:w-1/3 mt-6 lg:mt-0 flex flex-col gap-6">
 
                 <div>
@@ -99,7 +94,6 @@ const Cards = ({
                     </div>
                 </div>
 
-                {/* Resolved Tasks */}
                 <div>
                     <h2 className="text-3xl sm:text-5xl font-semibold">Resolved Tasks</h2>
                     <div className="mt-5 flex flex-col gap-4">
