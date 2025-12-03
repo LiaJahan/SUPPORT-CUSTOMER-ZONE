@@ -17,7 +17,6 @@ function App() {
   const [resolvedTasks, setResolvedTasks] = useState([]);
   const [inProgressCount, setInProgressCount] = useState(0);
   const [resolvedCount, setResolvedCount] = useState(0);
-
   const fetchDataApi = fetchData();
 
   return (
