@@ -32,6 +32,12 @@ const Cards = ({
         toast.info(`${task.title} Completed!`);
     };
 
+    const statusColors = {
+        Open: "bg-green-400",
+        "In Progress": "bg-orange-400",
+    };
+
+
 
     return (
         <div className="w-full flex flex-col lg:flex-row justify-between gap-6 sm:gap-10">
@@ -46,7 +52,8 @@ const Cards = ({
                                 <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between mb-2 gap-2'>
                                     <h2 className='font-bold text-lg sm:text-xl'>{ticket.title}</h2>
                                     <button
-                                        className='btn bg-green-400 rounded-full text-sm sm:text-base flex items-center gap-2'
+                                        className={`btn rounded-full text-sm sm:text-base flex items-center gap-2 
+    ${statusColors[ticket.status] || "bg-gray-400"}`}
                                         onClick={() => handleAddToTasks(ticket)}
                                     >
                                         <img
@@ -56,6 +63,7 @@ const Cards = ({
                                         />
                                         {ticket.status}
                                     </button>
+
                                 </div>
 
                                 <p className='text-gray-600 mb-2 text-sm sm:text-base'>
@@ -64,7 +72,18 @@ const Cards = ({
 
                                 <div className='flex flex-wrap justify-between text-sm sm:text-base'>
                                     <p>{ticket.serial}</p>
-                                    <p className='text-red-600'>{ticket.priority}</p>
+                                    <p
+                                        className={
+                                            ticket.priority === "Critical" && "High"
+                                                ? "text-red-600"
+                                                : ticket.priority === "Medium"
+                                                    ? "text-orange-500"
+                                                    : "text-green-600"
+                                        }
+                                    >
+                                        {ticket.priority}
+                                    </p>
+
                                     <p><strong>{ticket.customer}</strong></p>
                                     <p>{ticket.createdAt}</p>
                                 </div>
